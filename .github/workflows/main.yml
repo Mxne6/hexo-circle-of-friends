@@ -45,6 +45,12 @@ jobs:
         python-version: 3.11
         cache: "pip"
 
+# 将pip版本设置为21.2.1
+    - name: Downgrade PIP
+      working-directory: ./hexo_circle_of_friends
+      run: |
+        pip install -U pip==21.2.1
+
     - name: Install requirements
       working-directory: ./hexo_circle_of_friends
       run: |
